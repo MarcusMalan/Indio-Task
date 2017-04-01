@@ -1,0 +1,76 @@
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+}
+
+.App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+}
+
+.App-intro {
+    font-size: large;
+}
+
+.game.hidden {
+    display: none;
+}
+
+.wordsquare-container {
+    position: relative;
+    display: inline-table;
+    margin: 1vw;
+    width: 12vw;
+    height: 8vw;
+}
+
+.WordSquare {
+    text-align: center;
+    background-color: #f2e8d4;
+    border: 3px solid #e2d6c2;
+    height: 100%;
+    border-radius: 10px;
+    width: 100%;
+    background-size: cover;
+}
+
+.WordSquare .wordsquare-text {
+    position: relative;
+    top: 40%;
+}
+
+.WordSquare.blue>.wordsquare-text>.text, .WordSquare.red>.wordsquare-text>.text, .WordSquare.white>.wordsquare-text>.text, .WordSquare.black>.wordsquare-text>.text {
+    visibility: hidden;
+    background-size: contain;
+}
+
+.WordSquare.blue {
+    background-image: url(img/blue-spy1.png);
+}
+
+.WordSquare.red {
+    background-image: url(img/red-spy1.png);
+}
+
+.WordSquare.white {
+    background-image: url(img/innocent1.png);
+}
+
+.WordSquare.black {
+    background-image: url(img/assassin.png);
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

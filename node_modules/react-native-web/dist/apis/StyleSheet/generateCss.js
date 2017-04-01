@@ -1,0 +1,23 @@
+var _hyphenate=require('./hyphenate');var _hyphenate2=_interopRequireDefault(_hyphenate);
+var _mapKeyValue=require('../../modules/mapKeyValue');var _mapKeyValue2=_interopRequireDefault(_mapKeyValue);
+var _normalizeValue=require('./normalizeValue');var _normalizeValue2=_interopRequireDefault(_normalizeValue);
+var _static=require('inline-style-prefixer/static');var _static2=_interopRequireDefault(_static);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
+
+var createDeclarationString=function createDeclarationString(prop,val){
+var name=(0,_hyphenate2.default)(prop);
+var value=(0,_normalizeValue2.default)(prop,val);
+if(Array.isArray(val)){
+return val.map(function(v){return name+':'+v;}).join(';');
+}
+return name+':'+value;
+};
+
+
+
+
+
+
+
+var generateCss=function generateCss(style){return(0,_mapKeyValue2.default)((0,_static2.default)(style),createDeclarationString).sort().join(';');};
+
+module.exports=generateCss;
