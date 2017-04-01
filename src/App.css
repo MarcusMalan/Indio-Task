@@ -1,76 +1,82 @@
-.App {
-    text-align: center;
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
-.App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 80px;
+body {
+    font: 300 14px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #eee;
+    margin: 0;
+    padding: 0;
 }
 
-.App-header {
-    background-color: #222;
-    height: 150px;
-    padding: 20px;
-    color: white;
+.tabs {
+    margin: 25px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
 }
 
-.App-intro {
-    font-size: large;
+.tabs .labels {
+    margin: 0;
+    padding: 0;
 }
 
-.game.hidden {
-    display: none;
+.tabs .labels li {
+    display: inline-block;
 }
 
-.wordsquare-container {
-    position: relative;
-    display: inline-table;
-    margin: 1vw;
-    width: 12vw;
-    height: 8vw;
+.tabs .labels li a {
+    padding: 8px 12px;
+    display: block;
+    color: #444;
+    text-decoration: none;
+    border-bottom: 2px solid #f5f5f5;
 }
 
-.WordSquare {
-    text-align: center;
-    background-color: #f2e8d4;
-    border: 3px solid #e2d6c2;
-    height: 100%;
-    border-radius: 10px;
-    width: 100%;
-    background-size: cover;
+.tabs .labels li a.active {
+    border-bottom-color: #337ab7;
 }
 
-.WordSquare .wordsquare-text {
-    position: relative;
-    top: 40%;
+.tabs .content {
+    padding: 25px;
 }
 
-.WordSquare.blue>.wordsquare-text>.text, .WordSquare.red>.wordsquare-text>.text, .WordSquare.white>.wordsquare-text>.text, .WordSquare.black>.wordsquare-text>.text {
-    visibility: hidden;
-    background-size: contain;
+.field {
+    width: 500px;
+    border: 1px solid grey;
 }
 
-.WordSquare.blue {
-    background-image: url(img/blue-spy1.png);
+.buttonContainer {
+    height: 30px;
+    padding-right: 5px;
 }
 
-.WordSquare.red {
-    background-image: url(img/red-spy1.png);
+.buttonContainer button {
+    float: right;
+    margin: 5px;
+    display: block;
 }
 
-.WordSquare.white {
-    background-image: url(img/innocent1.png);
+label {
+    padding: 5px;
+    display: block;
 }
 
-.WordSquare.black {
-    background-image: url(img/assassin.png);
+.fieldContainer {
+    margin: 10px;
+    display: block;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.radioLabel, .previewInput, label.radioLabel {
+    display: inline;
+}
+
+.fieldPreview label {
+    display: inline;
+}
+
+.radioContainer {
+    padding-left: 5px;
 }
