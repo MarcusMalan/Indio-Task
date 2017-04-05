@@ -9,9 +9,6 @@ const App = React.createClass({
   getInitialState() {
     return {fields : []};
   },
-  changeForm(fields) {
-    this.setState();
-  },
   changeInputHandler() {
     let form = this;
     return(function(fields) {
